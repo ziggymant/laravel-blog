@@ -1,27 +1,35 @@
-# Laravel PHP Framework
+# Laravel Blog
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+A blog with a public site and an admin panel for managing content. I built it between **December 2016 and January 2017** while following a Laravel tutorial. Laravel was the **first framework I learned**, and this project is where I picked up the basics I later used in my own Laravel projects. I've kept it here as a record of where I started, so it shows the code as it was then. It isn't maintained or production-ready.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## What it does
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+- Shows a public blog where visitors can read posts, browse them by category and search them.
+- Gives each post a readable web address based on its title, using slugs.
+- Lets users register and requires them to confirm their email address before they can log in.
+- Lets logged-in users comment on posts, reply to other comments and edit their own profile.
+- Includes an admin panel for managing users, roles, posts, categories, uploaded photos and comments.
+- Shows an admin dashboard with charts of site statistics.
 
-## Official Documentation
+## Technologies used
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+- **PHP** with **Laravel 5.3**, including Eloquent ORM, Blade templates, migrations, resource controllers, middleware, authentication and mail
+- **MySQL** as the database
+- **Bootstrap**, **jQuery** and **Sass**, built with **Gulp** and **Laravel Elixir**
+- Laravel packages:
+  - `laravelcollective/html` for forms
+  - `cviebrock/eloquent-sluggable` for slugs
+  - `consoletvs/charts` for the dashboard charts
+- **Mailgun** for sending activation emails
+- **Composer**, **npm** and **Git**
 
-## Contributing
+## What I learned
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+- How a modern PHP framework is organised, with routes, controllers, models, views and middleware.
+- How to use Eloquent ORM and relationships between users, posts, categories, photos, comments and replies.
+- How to manage database changes with migrations.
+- How to use Laravel's built-in login system and extend it with email activation.
+- How to protect admin pages with roles and custom middleware.
+- How to build an admin panel with full create, read, update and delete (CRUD) features, forms, validation and file uploads.
+- How to add third-party packages with Composer and use them in an app.
+- How to send emails through an external mail service.
